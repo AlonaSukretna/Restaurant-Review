@@ -32,27 +32,39 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 
 0. Make maps work by replacing API keys in main.js and restaurant_info.js
 
-Responsive Design:
+#### Responsive Design:
+
 1. Use appropriate document type declaration and viewport tags.
 Add to index.html and restaurant.html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+
 2. Create a responsive grid-based layout using CSS.
+
 3. Use media queries that provide fluid breakpoints across different screen sizes
+
 4. Use responsive images that adjust for the dimensions and resolution of any device
 
 
-Accessibility:
+#### Accessibility:
+
 Run Audit in DevTools for accessibility.
-1.<img id="restaurant-img"> add alt attribute.
-2.Footer background color, h1, a had not sufficient contrast. Change colors.
+
+1. restaurant-image add alt attribute.
+
+2. Footer background color, h1, a had not sufficient contrast. Change colors.
+
 3. Add language attribute to html.
+
 4. Filter elements (select neighborhoods, select cuisines)add aria labeles
 for screenreader.
 
-Offline Availability:
+#### Offline Availability:
+
 1. Register Service Worker: register_sw.js
+
 2. Include script to index.html and restaurant.html.
-  <script src="js/register_sw.js"></script>
+
 3. Created the Service Worker script in the root of the application (‘/sw.js’).
+
 4. Event handler to serve cached assets
