@@ -29,7 +29,9 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
 
 ### How I did it:
+
 0. Make maps work by replacing API keys in main.js and restaurant_info.js
+
 Responsive Design:
 1. Use appropriate document type declaration and viewport tags.
 Add to index.html and restaurant.html
@@ -43,8 +45,7 @@ Add to index.html and restaurant.html
 Accessibility:
 Run Audit in DevTools for accessibility.
 1.<img id="restaurant-img"> add alt attribute.
-2.Footer background color, <h1 id="restaurant-name"></h1>, a{} had not sufficient
- contrast. Change colors.
+2.Footer background color, h1, a had not sufficient contrast. Change colors.
 3. Add language attribute to html.
 4. Filter elements (select neighborhoods, select cuisines)add aria labeles
 for screenreader.
