@@ -55,6 +55,7 @@ self.addEventListener('fetch', event => {
   );
 });
 
+/*
 // delete old/unused static caches
 self.addEventListener('activate', function(event) {
   var cacheWhitelist = ['restaurant-static-v1'];
@@ -65,6 +66,22 @@ self.addEventListener('activate', function(event) {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
+        })
+      );
+    })
+  );
+});*/
+
+// delete old/unused static caches
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    // caches.delete('-restaurant-static-v1')
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.filter(cacheName => {
+          return cacheName.startsWith('restaurant-static-') && cacheName !== staticCacheName;
+        }).map(cacheName => {
+          return caches.delete(cacheName);
         })
       );
     })
