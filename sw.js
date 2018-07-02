@@ -7,6 +7,7 @@ self.addEventListener('install', event => {
     caches.open(staticCacheName)
       .then(cache => {
         return cache.addAll([
+          '/',
           '/index.html',
           '/css/styles.css',
           '/js/dbhelper.js',
@@ -27,7 +28,7 @@ self.addEventListener('install', event => {
         ]).catch(error => {
           console.log('Caches open failed: ' + error);
         });
-      })
+    })
   );
 });
 
